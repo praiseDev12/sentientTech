@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <p>
+        <button class="btn--rules btn btn-btm">rules</button>
+      </p>
+      <P>
+        <button class="btn--config btn btn-btm">Config</button>
+      </P>
+      <p>
+        <button class="btn--credit btn btn-btm">Credit</button>
+      </p>
+
+      <section class="player player--0 player--active">
+        <h1 class="scoreBoard-0 scoreBoard">0</h1>
+        <h2 class="name p1" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <p class="winner--0 hidden win">WINNER</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+
+    <!-- <div class="form-field modal hidden">
+      <form action="" clas="user-name">
+        <label for="username" class="config-title">Player 1 name</label>
+        <input type="text" id="username" placeholder="Player Name" name="username">
+      </form>
+      <form action="" clas="user-name">
+        <label for="username" class="config-title">Player 2 name</label>
+        <input type="text" id="username" placeholder="Player Name" name="username">
+      </form>
+    </div> -->
+
+      <section class="player player--1" type="value">
+        <h1 class="scoreBoard-1 scoreBoard">0</h1>
+        <h2 class="name p2" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <p class="winner--1 hidden win">WINNER</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice hidden" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+    <div class="overlay hidden"></div>
+    <div class="overlay oms"></div>
+    <div class="rules-modal modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1 class="modalTitle">RULES</h1>
+      <p class="rules--page">
+        1. Each player, starting with "Player 1" Rolls a Dice to aquire
+        points.<br />
+        2. Points are determined from the numbers on the dice rolled<br />
+        3. A player may roll as much as they can to gain points<br />
+        4. Points can be saved by clicking "Hold"<br />
+        5. If the Number "1" is rolled all points unsaved will be lost<br/> 
+        6. The first player to reach 100 points WINS<br />
+        <P class="have-fun">HAVE FUN</P>
+      </p>
+    </div>
+
+    <div class="player-select">
+      <h1 class="config-title">GAME MODE</h1>
+      <button class="multiplayer mode-btn btn">MultiPlayer</button>
+      <button class="bot-button mode-btn btn">Single Player</button>
+    </div>
+
+
+    <div class="config-modal modal hidden">
+      <button class="close-modal cmc">&times;</button>
+      <p class="config-title">KEY CONFIGURATION</p>
+      <p class="player-1-2">Player 1</p>
+        <p>
+          W - Roll Dice<br/>
+          S - Hold Points
+          <p>Esc - Reset Game</p>
+        </p>
+        <p class="player-1-2">Player 2</p>
+          <p>
+            O - Roll Dice<br/>
+            L - Hold Points
+          </p>
+          <p>Esc - Reset Game</p>
+    </div>
+    <div class="credit-modal modal hidden">
+      <button class="close-modal cmcr">&times;</button>
+      <p>
+        This Game was Made by<br/>
+        <p class="dev">Jonas Schedtman</p>
+        <p class="dev">Praise Ezeofor</p>
+        Thanks for Playing
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
